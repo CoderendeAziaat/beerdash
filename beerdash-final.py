@@ -504,6 +504,15 @@ with tab3:
         )
     ).add_to(CombiAantalPlot)
 
+    # ✅ Marker toevoegen op de locatie van het Titanic-wrak
+    titanic_coords = [41.7325, -49.9469]  # Coördinaten van het wrak
+    folium.Marker(
+        location=titanic_coords,
+        popup="Hier geen biertjes meer :(",
+        tooltip="🚢 Titanic Wreck Site",
+        icon=folium.Icon(color="gray", icon="info-sign")
+    ).add_to(CombiAantalPlot)
+
     folium.LayerControl().add_to(CombiAantalPlot)
 
     ########################################################################################
